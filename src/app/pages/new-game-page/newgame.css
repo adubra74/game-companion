@@ -1,0 +1,11 @@
+.container {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blue;
+}
+
+.accordeon {
+    width: 80%;
+}

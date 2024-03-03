@@ -1,0 +1,56 @@
+.btn {
+    background-color: var(--text-color);
+    padding: 1em;
+    border-radius: 6px;
+    color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn * {
+    margin: 0 5px;
+}
+
+.selected {
+    background-color: var(--teal);
+
+}
+
+/* HEADER */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-purple);
+    color: var(--teal);
+    height: 8vh;
+    font-size: 40px;
+    padding: 1em;
+}
+/* IN GAME FOOTER*/
+.footerContainer {
+    width: 100vw;
+    background-color: var(--teal);
+} 
+
+.footer {
+    background-color: var(--teal);
+    color: var(--background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3em;
+    padding: 6px;
+}
+
+.nextStep {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 5em;
+}

@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: #D6D4DC;
+  --background: #1F1047;
+  --teal: #38E9BD;
+  --secondary-purple: #3B227D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1F1047;
+    --teal: #38E9BD;
+    --text-color: #D6D4DC;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background);
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

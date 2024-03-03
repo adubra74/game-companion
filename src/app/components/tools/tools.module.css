@@ -1,0 +1,73 @@
+.textInput {
+    color: var(--background);
+}
+
+.table {
+    background-color: var(--text-color);
+    color: var(--background);
+    border: none;
+    width: 90vw;
+    margin: 1em auto 1em auto;
+}
+
+.tablerow {
+    text-align: center;
+}
+
+.total {
+    background-color: var(--secondary-purple);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.AccContainer {
+    width: 90vw;
+}
+
+
+.accordeon {
+    width: 90%;
+}
+
+.button {
+    background-color: var(--secondary-purple);
+    padding: .5rem;
+    margin: 1rem;
+
+}
+
+.scoreContainer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* DICES */
+.dicesContainer {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    background-color: var(--secondary-purple);
+}
+
+
+.dicePanel {
+    width: 30vw;
+    background-color: var(--secondary-purple);
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.diceButton {
+    color: var(--text-color);
+    padding: 1em .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-color: var(--text-color);
+    border-width: .5px 0;
+}
