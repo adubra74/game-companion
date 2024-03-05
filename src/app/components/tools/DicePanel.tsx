@@ -48,13 +48,13 @@ const DicePanel = (props) => {
 
     function selectDice(dice) {
         //PAS COMME CA - CHERCHER COMMENT AJOUTER ET PAS REMPLACER !
-        dices.push(dice);
+        setDices([...dices, dice]);
         console.log(dices);
     }
 
     return (
         <div className={styles.dicePanel}>
-            <button onClick={()=>{props.setVisible(!props.visible);}} ><FontAwesomeIcon icon={faXmark}/></button>
+            <button onClick={()=>{props.setVisible(!props.visible);}} style={{textAlign:'end', padding:'.5em'}}><FontAwesomeIcon icon={faXmark}/></button>
             {diceCatalog.map((dice, index) =>
                 <button key={index} onClick={() => selectDice(dice)} className={styles.diceButton}>
                     <Image
