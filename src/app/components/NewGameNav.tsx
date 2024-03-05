@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './styles.module.css'
+import React from "react";
+import { faArrowRight, faPlay } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import styles from "./styles.module.css"
 
 const NewGameNav = (props) => {
     const step = props.step;

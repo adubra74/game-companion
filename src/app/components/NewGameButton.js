@@ -1,10 +1,9 @@
 'use client'
-import React from 'react';
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react';
-import Link from 'next/link'
-import styles from './styles.module.css'
+import React from "react";
+import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
+import styles from "./styles.module.css"
 
 const NewGameButton = () => {
   

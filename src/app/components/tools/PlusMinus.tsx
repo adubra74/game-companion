@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "flowbite-react";
@@ -13,25 +13,25 @@ const PlusMinus = (props) => {
     function changeScore(playerIndex, type) {
         setScores((prevScores) => ({
             ...prevScores,
-            [playerIndex]: type === 'plus' ? prevScores[playerIndex] + 1 : prevScores[playerIndex] - 1,
+            [playerIndex]: type === "plus" ? prevScores[playerIndex] + 1 : prevScores[playerIndex] - 1,
         }));
     }
 
 
     return (
-        <div style={{padding:'1em', textAlign:'center'}}>
+        <div style={{padding:"1em", textAlign:"center"}}>
             <h1>COMPTEUR</h1>
             {players.map((player, index) =>
                 <div className={styles.scoreContainer} key={index}>
                     <h2>{player}</h2>
                     <Button.Group style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-                        <Button onClick={() => changeScore(index, 'minus')} color="gray" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">
+                        <Button onClick={() => changeScore(index, "minus")} color="gray" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">
                             <FontAwesomeIcon icon={faMinus} />
                         </Button>
                         <Button color="gray" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">
                             {scores[index]}
                         </Button>
-                        <Button color="gray" onClick={() => changeScore(index, 'plus')} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">
+                        <Button color="gray" onClick={() => changeScore(index, "plus")} className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">
                             <FontAwesomeIcon icon={faPlus}  />
                         </Button>
                     </Button.Group>

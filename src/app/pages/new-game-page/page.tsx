@@ -1,55 +1,55 @@
 'use client';
-import { faDice, faRankingStar, faPersonCircleQuestion, faRotate, faPlusMinus, faHourglassEnd } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
-import NewGameNav from '../../components/NewGameNav';
-import StepOne from '../../components/StepOne';
-import StepTwo from '../../components/StepTwo';
-import { useRouter } from 'next/navigation';
+import { faDice, faRankingStar, faPersonCircleQuestion, faRotate, faPlusMinus, faHourglassEnd } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react";
+import NewGameNav from "../../components/NewGameNav";
+import StepOne from "../../components/StepOne";
+import StepTwo from "../../components/StepTwo";
+import { useRouter } from "next/navigation";
 
 export default function NewGame() {
 
     const [step, setStep] = useState(1);
     const router = useRouter()
     var selectedTools: any[];
-    const [players, setPlayers] = useState(['']);
-    const [gameName, setGameName] = useState('');
+    const [players, setPlayers] = useState([""]);
+    const [gameName, setGameName] = useState("");
 
     const [tools, setTools] = useState([{
         id: 1,
-        textId: 'dice',
+        textId: "dice",
         title: "Set de dés",
         icon: faDice,
         selected: false,
     }, {
         id: 2,
-        textId: 'score',
+        textId: "score",
         title: "Grille de score",
         icon: faRankingStar,
         selected: false,
     },
     //{
     //     id: 3,
-    //     textId: 'first',
+    //     textId: "first",
     //     title: "Selection 1er joueur",
     //     icon: faPersonCircleQuestion,
     //     enCours: false,
     // }, 
     {
         id: 3,
-        textId: 'tracker',
+        textId: "tracker",
         title: "Tracker de tour",
         icon: faRotate,
         selected: false,
     }, {
         id: 4,
-        textId: 'counter',
+        textId: "counter",
         title: "Compteur",
         icon: faPlusMinus,
         selected: false,
     },
     {
         id: 5,
-        textId: 'timer',
+        textId: "timer",
         title: "Sablier",
         icon: faHourglassEnd,
         selected: false,
@@ -68,17 +68,17 @@ export default function NewGame() {
         };
 
         // Stocker settings dans le localStorage
-        localStorage.setItem('gameSettings', JSON.stringify(settings));
+        localStorage.setItem("gameSettings", JSON.stringify(settings));
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        router.push('/pages/in-game-page');  
+        router.push("/pages/in-game-page");  
         return settings;
     };
 
     //RETURN 
     if (step == 1) {
         return (
-            <div className='w-full flex flex-col justify-between h-full'>
+            <div className="w-full flex flex-col justify-between h-full">
             <StepOne tools={tools} setTools={setTools} step={step} setStep={setStep} />
             <div className="absolute bottom-0 w-full">
             <NewGameNav step={step} setStep={setStep} />
@@ -88,7 +88,7 @@ export default function NewGame() {
         )
     } if (step == 2) {
         return (
-            <div className='w-full flex flex-col justify-between h-full'>
+            <div className="w-full flex flex-col justify-between h-full">
             <StepTwo players={players} setPlayers={setPlayers} gameName={gameName} setGameName={setGameName} />
             <div className="absolute bottom-0 w-full">
             <NewGameNav step={step} setStep={setStep} />

@@ -1,6 +1,6 @@
 import { Accordion } from "flowbite-react";
 import { useState } from "react";
-import styles from './tools.module.css';
+import styles from "./tools.module.css";
 
 const ScoreBoard = (props) => {
     const { players } = props;
