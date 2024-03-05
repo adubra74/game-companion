@@ -6,7 +6,7 @@ import ScoreBoard from "../../components/tools/ScoreBoard";
 import PlusMinus from "../../components/tools/PlusMinus";
 import Dices from "../../components/tools/Dices";
 
-function inGamePage() {
+function InGamePage() {
 
     const [tools, setTools] = useState([]);
     const [players, setPlayers] = useState(null);
@@ -46,4 +46,4 @@ if (tools.length > 0){
 }else {return(<p>pas d'outils séléctionés</p>);}
 };
 
-export default inGamePage;
+export default InGamePage;

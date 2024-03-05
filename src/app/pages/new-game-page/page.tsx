@@ -6,7 +6,7 @@ import StepOne from '../../components/StepOne';
 import StepTwo from '../../components/StepTwo';
 import { useRouter } from 'next/navigation';
 
-export default function newGame() {
+export default function NewGame() {
 
     const [step, setStep] = useState(1);
     const router = useRouter()

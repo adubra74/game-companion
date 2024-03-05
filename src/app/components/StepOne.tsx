@@ -12,7 +12,7 @@ const StepOne = (props) => {
                     <Accordion.Panel>
                         <Accordion.Title>Utiliser un modèle</Accordion.Title>
                         <Accordion.Content>
-                        <p>/*Aucun modèle existant pour le moment*/</p>
+                        <p> -- Aucun modèle existant pour le moment --</p>
                         </Accordion.Content>
                     </Accordion.Panel>
                     <Accordion.Panel>
