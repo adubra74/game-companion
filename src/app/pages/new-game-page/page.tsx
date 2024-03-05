@@ -1,5 +1,4 @@
 'use client';
-import './newgame.css';
 import { faDice, faRankingStar, faPersonCircleQuestion, faRotate, faPlusMinus, faHourglassEnd } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import NewGameNav from '../../components/NewGameNav';
@@ -79,18 +78,22 @@ export default function newGame() {
     //RETURN 
     if (step == 1) {
         return (
-            <>
+            <div className='w-full flex flex-col justify-between h-full'>
             <StepOne tools={tools} setTools={setTools} step={step} setStep={setStep} />
+            <div className="absolute bottom-0 w-full">
             <NewGameNav step={step} setStep={setStep} />
-            </>
+            </div>
+            </div>
 
         )
     } if (step == 2) {
         return (
-            <>
+            <div className='w-full flex flex-col justify-between h-full'>
             <StepTwo players={players} setPlayers={setPlayers} gameName={gameName} setGameName={setGameName} />
+            <div className="absolute bottom-0 w-full">
             <NewGameNav step={step} setStep={setStep} />
-            </>
+            </div>
+            </div>
         )
     } else {
         handleStartGame(); 

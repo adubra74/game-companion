@@ -16,6 +16,8 @@ export default function Home() {
   }
   ])
 
+  
+
   const playing = games.filter(game => { return game.enCours });
   return (
     <html>
@@ -23,13 +25,9 @@ export default function Home() {
         <link rel="icon" href="./public/app-icon.jpg" />
       </head>
       <body>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          <h1 className="z-10 max-w-5xl w-full items-center justify-between text-m lg:flex">
-            Lancer une nouvelle partie
-          </h1>
-          <NewGameButton />
-
-          <h1>Reprendre une partie</h1>
+        <main className="flex flex-col items-center gap-4 text-center pt-8">
+          <NewGameButton/>
+          <h1 className="mt-10">Reprendre une partie</h1>
           {playing.map((playing, index) =>
             <ResumeGameButton game={playing} key={index} setGames={setGames} />
           )}

@@ -20,8 +20,7 @@ const Navigation = (props) => {
   const selectedTools = tabs.filter(tab => tools.includes(tab.key))
 
   return (
-    <div className={`max-h-[4.4rem] ${styles.footerContainer} px-6 rounded-t-xl absolute
-    -bottom-0 w-full `}>
+    <div className={`max-h-[4.4rem] ${styles.footerContainer} px-6 absolute bottom-5 w-full z-10`}>
       <ul className="flex relative">
         <span
           className={` duration-500 ${tabs[active].dis} border-4 border-gray-900 h-16 w-16 absolute

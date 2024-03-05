@@ -17,7 +17,7 @@ const Tool = (props) => {
     }
 
     return (
-        <div>
+        <div className="flex flex-row my-4 gap-3 items-center">
             <button className={`${styles.btn} ${tool.selected ? styles.selected : ''}`} id='tool' onClick={select}>
                 <FontAwesomeIcon icon={tool.icon} />
             </button>

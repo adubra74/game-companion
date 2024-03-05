@@ -29,29 +29,32 @@ const StepTwo = (props) => {
     };
 
     return (
-        <>
-            <h2>Nom du jeu</h2>
-            <TextInput className={styles.textInput} id='gameName' type="text" value={gameName} onChange={e => setGameName(e.target.value)} />
-            <h2>Joueurs</h2>
-            <Label>Joueur 1</Label>
+        <div className="flex flex-col justify-center p-4">
+            <h2 style={{fontSize:'1.2rem', fontWeight:'bold', textAlign:'center'}}>Nom du jeu</h2>
+            <TextInput className="p-2" id='gameName' type="text" value={gameName} onChange={e => setGameName(e.target.value)} />
+            <h2 className="my-4" style={{fontSize:'1.2rem', fontWeight:'bold', textAlign:'center'}}>Joueurs</h2>
+            <div className=" overflow-scroll">
+            <Label style={{ color: 'var(--text-color)' }}>Joueur 1</Label>
             <TextInput className={styles.textInput} id="player1" type="text" value={players[0]} onChange={e => handlePlayerChange(0, e.target.value)} />
 
             {/* Boucle sur les joueurs restants pour créer les champs de texte */}
             {players.slice(1).map((player, index) => (
-                <div key={index}>
-                    <Label>{`Joueur ${index + 2}`}</Label>
+                <div key={index} className="my-2">
+                    <Label style={{ color: 'var(--text-color)' }}>{`Joueur ${index + 2}`}</Label>
                     <TextInput
-                        className={styles.textInput}
+                        className=""
                         type="text"
                         value={player}
                         onChange={(e) => handlePlayerChange(index + 1, e.target.value)}
                     />
                 </div>
             ))}
-            <button onClick={addPlayerField}>Ajouter un joueur</button>
-
-            <button onClick={handleOKClick}>OK</button>
-        </>
+            </div>
+            <div className="flex flex-row gap-8 items-center mt-4">
+                <button className="p-2 rounded-md w-3/5" style={{backgroundColor:'var(--secondary-purple'}} onClick={addPlayerField}>Ajouter un joueur</button>
+                <button className="p-2 rounded-md w-3/5" style={{backgroundColor:'var(--secondary-purple'}} onClick={handleOKClick}>Valider</button>
+            </div>
+        </div>
     );
 };
 export default StepTwo;

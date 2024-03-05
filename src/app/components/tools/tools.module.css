@@ -33,7 +33,6 @@
     background-color: var(--secondary-purple);
     padding: .5rem;
     margin: 1rem;
-
 }
 
 .scoreContainer {
@@ -56,10 +55,11 @@
     background-color: var(--secondary-purple);
     display: flex;
     flex-direction: column;
-    height: 92vh;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
 }
 
 .diceButton {

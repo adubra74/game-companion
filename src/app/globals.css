@@ -32,3 +32,8 @@ h1 {
     text-wrap: balance;
   }
 }
+
+.button-base{
+  padding: .5rem;
+    margin: 1rem;
+}

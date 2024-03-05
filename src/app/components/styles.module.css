@@ -22,17 +22,16 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: var(--secondary-purple);
     color: var(--teal);
     height: 8vh;
     font-size: 40px;
-    padding: 1em;
+    padding: 1em .5em; 
 }
 /* IN GAME FOOTER*/
 .footerContainer {
-    width: 100vw;
     background-color: var(--teal);
 } 
 
