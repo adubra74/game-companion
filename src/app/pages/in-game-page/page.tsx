@@ -42,7 +42,7 @@ if (tools.length > 0){
             <Navigation tools={tools} setActiveTab={setActiveTab} activeTab={activeTab}/>
         </>
     )
-}else {return(<p>pas d"outils séléctionés</p>);}
+}else {return(<p>pas d &quot; outils séléctionés</p>);}
 };
 
 export default InGamePage;
